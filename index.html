@@ -34,7 +34,7 @@
     </h2>
 
     <!--MENU-->
-    <div>
+    <div id="menu">
         <main class="grid grid-cols-1 md:grid-cols-2 gap-7 md:gap-10 mx-auto max-w-7x1 px-2 mb-16">
             <!--PRODUTO ITEM-->
             <div class="flex gap-2">
@@ -173,13 +173,22 @@
 
 
     <!--MODAL CART-->
-    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden">
+    <div class="bg-black/60 w-full h-full fixed top-0 left-0 z-[99] items-center justify-center hidden" id="cart-modal">
         <div class="bg-white p-5 rounded-md min-w-[90%] md:min-w-[600px]">
             <h2 class="text-center font-bold text-2xl mb-2">Meu carrinho</h2>
 
             <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
 
             <p class="font-bold">Total: <span id="cart-total">0.00</span></p>
+
+            <p class="font-bold mt-4">Seu Nome completo</p>
+            <input 
+                type="text"
+                placeholder="Digite seu nome completo..."
+                id="firstname"
+                class="w-full border-2 p-1 rounded my-1"
+            />
+            <p class="text-red-500 hidden" id="name-warn">Digite seu endereço completo!</p>
 
             <p class="font-bold mt-4">Endereço de entrega</p>
             <input 
@@ -211,5 +220,7 @@
         </button>
     </footer>
     <!--FIM BUTTON CART FOOTER-->
+
+    <script src="/script.js"></script>
 </body>
 </html>
